@@ -1,10 +1,7 @@
 <template>
   <div>
     <HPopover v-slot="{ close }">
-      <HPopoverButton
-        class="rounded-lg border px-7 py-3 text-sm font-medium outline-none dark:border-gray-700"
-        >Add Board</HPopoverButton
-      >
+      <HPopoverButton class="btn px-7 py-3">Add Board</HPopoverButton>
 
       <TransitionSlide :offset="[0, '-30%']">
         <HPopoverPanel class="absolute z-20 mt-3 w-72">
@@ -14,6 +11,7 @@
             <form @submit.prevent="submit">
               <label class="label" for="board">Name</label>
               <input
+                placeholder="Enter board name"
                 v-model="name"
                 required
                 type="text"

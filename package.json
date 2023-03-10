@@ -10,6 +10,7 @@
   "devDependencies": {
     "@nuxtjs/google-fonts": "^3.0.0-1",
     "@tailwindcss/forms": "^0.5.3",
+    "@types/uuid": "^9.0.1",
     "@vueuse/core": "^9.13.0",
     "@vueuse/nuxt": "^9.13.0",
     "autoprefixer": "^10.4.14",
@@ -23,6 +24,10 @@
   },
   "dependencies": {
     "@morev/vue-transitions": "^2.3.6",
+    "simplebar": "^5.3.8",
+    "simplebar-vue3": "^0.2.0",
+    "uuid": "^9.0.0",
+    "vue3-toastify": "^0.1.4",
     "vuedraggable": "^4.1.0"
   }
 }

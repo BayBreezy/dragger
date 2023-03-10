@@ -1,5 +1,6 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+const title = "Dragger";
 export default defineNuxtConfig({
+  typescript: { shim: false },
   modules: [
     "@nuxtjs/google-fonts",
     "@vueuse/nuxt",
@@ -7,7 +8,7 @@ export default defineNuxtConfig({
     "nuxt-headlessui",
     "@morev/vue-transitions/nuxt",
   ],
-  css: ["~/assets/css/main.css"],
+  css: ["simplebar/dist/simplebar.min.css", "~/assets/css/main.css"],
   googleFonts: {
     families: {
       Inter: [100, 200, 300, 400, 500, 600, 700, 800, 900],
@@ -22,5 +23,12 @@ export default defineNuxtConfig({
 
   headlessui: {
     prefix: "H",
+  },
+
+  app: {
+    pageTransition: { appear: true, name: "page", mode: "out-in" },
+    head: {
+      title,
+    },
   },
 });
