@@ -7,6 +7,7 @@
           item-key="id"
           class="mt-10 flex w-full flex-nowrap gap-10"
           v-model="myBoards"
+          filter=".ignore"
         >
           <template #item="{ element, index }">
             <TransitionFade group mode="out-in">
@@ -23,7 +24,7 @@
                     <div class="flex items-center gap-2">
                       <button
                         @click="removeBoard(index)"
-                        class="btn-icon ignore-elements"
+                        class="btn-icon ignore"
                       >
                         <Icon size="18" name="heroicons:trash" />
                       </button>
@@ -53,7 +54,7 @@
                 <div class="mt-2">
                   <button
                     @click="addTask(element, index)"
-                    class="btn-ghost w-full"
+                    class="btn-ghost ignore w-full"
                   >
                     Add task
                   </button>
